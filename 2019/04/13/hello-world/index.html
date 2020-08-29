@@ -240,7 +240,7 @@
 
     
 
-    <a href="/categories/life" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>生活</a>
+    <a href="/categories/life" rel="section"><i class="menu-item-icon fa fa-fw fa-paw"></i> <br>生活</a>
 
   </li>
         
@@ -257,7 +257,7 @@
 
     
 
-    <a href="/literature/" rel="section"><i class="menu-item-icon fa fa-fw fa-literature"></i> <br>文学</a>
+    <a href="/literature/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>文学</a>
 
   </li>
         
@@ -291,7 +291,7 @@
 
     
 
-    <a href="/photography/" rel="section"><i class="menu-item-icon fa fa-fw fa-photography"></i> <br>摄影</a>
+    <a href="/photography/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>摄影</a>
 
   </li>
         
@@ -308,7 +308,7 @@
 
     
 
-    <a href="/travel/" rel="section"><i class="menu-item-icon fa fa-fw fa-travel"></i> <br>旅行</a>
+    <a href="/travel/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>旅行</a>
 
   </li>
         
@@ -325,7 +325,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>关于</a>
 
   </li>
 
@@ -465,6 +465,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/04/13/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/13/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -551,7 +564,6 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzcyMi8yMDI2Mg=="></div>
     </div>
 
   
@@ -700,7 +712,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heartbeat"></i>
   </span>
@@ -831,22 +843,37 @@
   
 
   
-
-
   
-    <script>
-  window.livereOptions = {
-    refer: '2019/04/13/hello-world/'
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'mn9Ijv9PgzGcPcrQ2Dlr2CVt-gzGzoHsz',
+    appKey: '1B5j1Dyga5NpHpk4ntGLnDny',
+    placeholder: '我还想和你谈论宇宙和天空，或是沙滩里的碎石和人生',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
 </script>
+
+
+
 
   
 
